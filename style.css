@@ -126,3 +126,18 @@ img.full-cover {
     object-fit: cover;
     /* Ensures the image covers the entire area */
 }
+
+.parent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .absolute.bottom-8.text-gray-400.bottomtotop {
+    position: absolute;
+    bottom: 20px; /* Retain the bottom spacing if required */
+    text-align: center;
+  }
+  
