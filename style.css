@@ -90,3 +90,10 @@
         animation: bottomtotop 5s;
     }
 }
+
+.new-rocker-regular {
+    font-family: "New Rocker", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
