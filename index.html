@@ -2,19 +2,23 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kalash Vasaniya - Rockstar - Music and Entertainment">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Kalash Vasaniya | Rockstar">
+    <meta property="og:description" content="Experience the music of Kalash Vasaniya">
+    <meta property="og:image" content="/img/rockstar.jpg">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKSXYNMLD"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-FJKSXYNMLD');
     </script>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=New+Rocker&family=Rock+3D&display=swap" rel="stylesheet">
@@ -25,24 +29,25 @@
     <title>Kalash Vasaniya | Rockstar</title>
 </head>
 
-<body class="bg-black">
-
+<body class="bg-black min-h-screen overflow-x-hidden">
+    <!-- Background Video (Hidden) -->
     <iframe class="hidden" width="560" height="315"
         src="https://www.youtube.com/embed/yV2HyFC_gwo?autoplay=1&mute=1&si=u2KeHfwTe3vgwFmt"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+    <!-- Initial Loading Screen -->
     <div class="showSeven">
-        <div class="md:block hidden">
-            <div className='bg-black'>
+        <div class="hidden md:block">
+            <div class="bg-black">
                 <div class="absolute fade">
-                    <img class="fixed -top-5" src="/img/RCKSTR.png" alt="Rockstar">
+                    <img class="fixed -top-5 w-full h-auto" src="/img/RCKSTR.png" alt="Rockstar">
                 </div>
             </div>
         </div>
         <div class="block md:hidden">
-            <div className='bg-black'>
+            <div class="bg-black">
                 <div class="absolute fade">
                     <img class="fixed full-cover" src="/img/grk.jpeg" alt="Rockstar">
                 </div>
@@ -50,68 +55,68 @@
         </div>
     </div>
 
+    <!-- Main Content -->
     <div class="hideSeven">
-        <div class="md:block hidden">
-
-            <!-- name  -->
+        <!-- Desktop View -->
+        <div class="hidden md:block">
+            <!-- Title -->
             <div class="flex justify-center top-8 z-10 relative righttoleft">
                 <p class="text-base text-white">
                     <button>
-                        <a class="rock-3d-regular text-3xl hover:text-red-500 hover:scale-110" href="/imtiazali.html"
-                            target="_blank">
+                        <a class="rock-3d-regular text-3xl hover:text-red-500 hover:scale-110 transition-all duration-300" 
+                           href="/imtiazali.html" target="_blank">
                             Rockstar
                         </a>
                     </button>
                 </p>
             </div>
 
-
-            <!-- image  -->
+            <!-- Background Image -->
             <div class="absolute fade">
-                <img class="fixed" src="/img/rockstar.jpg" alt="Rockstar">
+                <img class="fixed w-full h-auto object-cover" src="/img/rockstar.jpg" alt="Rockstar">
             </div>
 
-            <!-- spotify  -->
+            <!-- Spotify Player -->
             <div class="relative top-48 -right-[10rem] z-20 max-w-[30rem] righttoleft">
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/album/3RZxrS2dDZlbsYtMRM89v8?utm_source=generator" width="100%"
+                <iframe class="w-full rounded-xl shadow-lg"
+                    src="https://open.spotify.com/embed/album/3RZxrS2dDZlbsYtMRM89v8?utm_source=generator" 
                     height="352" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
             </div>
         </div>
 
+        <!-- Mobile View -->
         <div class="block md:hidden">
-
-            <!-- name  -->
+            <!-- Title -->
             <div class="flex justify-center top-8 z-10 relative toptobottom">
                 <p class="text-base text-white">
                     <button>
-                        <a class="rock-3d-regular text-2xl hover:scale-110" href="/imtiazali.html" target="_blank">
+                        <a class="rock-3d-regular text-2xl hover:scale-110 transition-all duration-300" 
+                           href="/imtiazali.html" target="_blank">
                             Rockstar
                         </a>
                     </button>
                 </p>
             </div>
 
-            <!-- spotify  -->
+            <!-- Spotify Player -->
             <div class="relative px-6 pt-20 bottomtotop z-10">
-                <iframe style="border-radius:12px"
+                <iframe class="w-full rounded-xl shadow-lg"
                     src="https://open.spotify.com/embed/album/3RZxrS2dDZlbsYtMRM89v8?utm_source=generator&theme=0"
-                    width="100%" height="152" frameBorder="0" allowfullscreen=""
+                    height="152" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"></iframe>
             </div>
 
-            <!-- image  -->
+            <!-- Background Image -->
             <div class="absolute fade">
-                <img class="fixed pt-10" src="/img/rockstar-m.jpeg" alt="Rockstar">
+                <img class="fixed pt-10 w-full h-auto object-cover" src="/img/rockstar-m.jpeg" alt="Rockstar">
             </div>
         </div>
     </div>
 
     <script src="/script.js"></script>
-
 </body>
 
 </html>

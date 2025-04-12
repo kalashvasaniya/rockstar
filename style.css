@@ -1,96 +1,120 @@
-.hideSeven {
-    display: none;
+/* Base Styles */
+:root {
+    --animation-duration: 5s;
+    --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media (min-width: 100px) {
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
 
+/* Content Visibility */
+.hideSeven {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s var(--animation-timing);
+}
+
+.hideSeven.visible {
+    opacity: 1;
+}
+
+/* Animations */
+@media (min-width: 100px) {
     @keyframes lefttoright {
         0% {
             transform: translateX(100%);
+            opacity: 0;
         }
-
         100% {
             transform: translateX(0);
+            opacity: 1;
         }
     }
 
     .lefttoright {
-        animation: lefttoright 5s;
+        animation: lefttoright var(--animation-duration) var(--animation-timing);
     }
 
     @keyframes righttoleft {
         0% {
             transform: translateX(-100%);
+            opacity: 0;
         }
-
         100% {
             transform: translateX(0);
+            opacity: 1;
         }
     }
 
     .righttoleft {
-        animation: righttoleft 5s;
+        animation: righttoleft var(--animation-duration) var(--animation-timing);
     }
 
     @keyframes fade {
         0% {
             opacity: 0;
+            transform: scale(0.95);
         }
-
         100% {
             opacity: 1;
+            transform: scale(1);
         }
     }
 
     .fade {
-        animation: fade 5s;
+        animation: fade var(--animation-duration) var(--animation-timing);
     }
 
     @keyframes fade2 {
         0% {
             opacity: 0;
+            transform: scale(0.95);
         }
-
         100% {
             opacity: 1;
+            transform: scale(1);
         }
     }
 
     .fade2 {
-        animation: fade 14s;
+        animation: fade 14s var(--animation-timing);
     }
-
-
 
     @keyframes toptobottom {
         0% {
             transform: translateY(-100%);
+            opacity: 0;
         }
-
         100% {
             transform: translateY(0);
+            opacity: 1;
         }
     }
 
     .toptobottom {
-        animation: toptobottom 5s;
+        animation: toptobottom var(--animation-duration) var(--animation-timing);
     }
 
     @keyframes bottomtotop {
         0% {
             transform: translateY(100%);
+            opacity: 0;
         }
-
         100% {
             transform: translateY(0);
+            opacity: 1;
         }
     }
 
     .bottomtotop {
-        animation: bottomtotop 5s;
+        animation: bottomtotop var(--animation-duration) var(--animation-timing);
     }
 }
 
+/* Typography */
 .new-rocker-regular {
     font-family: "New Rocker", system-ui;
     font-weight: 400;
@@ -103,41 +127,64 @@
     font-style: normal;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
-
+/* Image Styles */
 .full-cover {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-    /* To ensure it's behind other content */
-}
-
-img.full-cover {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    /* Ensures the image covers the entire area */
+    z-index: -1;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .full-cover {
+        object-position: center;
+    }
+    
+    iframe {
+        max-width: 100%;
+    }
+}
+
+/* Layout Components */
 .parent {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Adjust as needed */
-  }
-  
-  .absolute.bottom-8.text-gray-400.bottomtotop {
+    min-height: 100vh;
+}
+
+.absolute.bottom-8.text-gray-400.bottomtotop {
     position: absolute;
-    bottom: 20px; /* Retain the bottom spacing if required */
+    bottom: 20px;
     text-align: center;
-  }
+    width: 100%;
+}
+
+/* Hover Effects */
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s var(--animation-timing);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.6;
+    }
+}
+
+.loading {
+    animation: pulse 2s infinite;
+}
   
