@@ -111,13 +111,13 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 5, ease: [0.4, 0, 0.2, 1] }}
-                className="absolute inset-0"
+                className="fixed inset-0"
               >
                 <Image
                   src="/img/rockstar.jpg"
                   alt="Rockstar"
                   fill
-                  className="object-cover"
+                  className="object-cover object-bottom"
                   priority
                 />
               </motion.div>
@@ -182,13 +182,13 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 5, ease: [0.4, 0, 0.2, 1] }}
-                className="absolute inset-0"
+                className="fixed inset-0"
               >
                 <Image
                   src="/img/rockstar-m.jpeg"
                   alt="Rockstar"
                   fill
-                  className="object-cover pt-10"
+                  className="object-cover object-bottom"
                   priority
                 />
               </motion.div>
