@@ -1,0 +1,98 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Metadata } from 'next'
+
+export default function ImtiazAliPage() {
+  const socialLinks = [
+    {
+      name: 'YouTube',
+      url: 'https://youtube.com/@idaali11?feature=shared',
+      icon: (
+        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 576 512" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style={{ color: 'white' }}>
+          <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+        </svg>
+      )
+    },
+    {
+      name: 'Spotify',
+      url: 'https://open.spotify.com/playlist/2hsNgSzPaCbNKPNQhCuuW4?si=0f165ca444bd4c71',
+      icon: (
+        <svg className="_3KpvHF_5T23c8sDCV9LEfx jaCGGbEXqG59KOa9TYXLY" width="20" height="20" data-links-category="social" data-links-identifier="621892e08c572a6a1be7c0eb" data-links-user="62172802da72d76b0ccc18d1" data-links-url="https://open.spotify.com/playlist/2hsNgSzPaCbNKPNQhCuuW4?si=0f165ca444bd4c71" data-google-action="click" data-google-category="social-link-click" data-google-label="kalashvasaniya-62172802da72d76b0ccc18d1" role="img" viewBox="0 0 24 24" style={{ fill: 'rgb(255, 255, 255)' }}>
+          <title>Spotify icon</title>
+          <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>
+        </svg>
+      )
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/imtiazaliofficial/',
+      icon: (
+        <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="25" width="25" xmlns="http://www.w3.org/2000/svg" style={{ color: 'white' }}>
+          <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+        </svg>
+      )
+    }
+  ]
+
+  return (
+    <div className="bg-black min-h-screen">
+      {/* Background Image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 5, ease: [0.4, 0, 0.2, 1] }}
+        className="absolute inset-0"
+      >
+        <Image
+          src="/img/Imtiaz Ali.jpeg"
+          alt="Imtiaz Ali"
+          fill
+          className="object-cover"
+          priority
+        />
+      </motion.div>
+
+      <div className="parent">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 5, ease: [0.4, 0, 0.2, 1] }}
+          className="absolute bottom-8 text-gray-400"
+        >
+          <ul className="pt-12 flex space-x-8 justify-center text-center">
+            {socialLinks.map((link, index) => (
+              <motion.li
+                key={link.name}
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  ease: [0.4, 0, 0.2, 1] 
+                }}
+                whileHover={{ 
+                  y: -4, 
+                  scale: 1.5,
+                  transition: { duration: 0.3 } 
+                }}
+                className="transition ease-in-out delay-150 duration-300"
+              >
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  {link.icon}
+                </a>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
+      </div>
+    </div>
+  )
+} 
