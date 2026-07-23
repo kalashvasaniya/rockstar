@@ -50,7 +50,7 @@ export default function Home() {
                   className="absolute inset-0"
                 >
                   <Image
-                    src="/img/RCKSTR.png"
+                    src="/img/RCKSTR.jpg"
                     alt="Rockstar"
                     fill
                     className="object-contain"

@@ -100,7 +100,7 @@ Replace `G-FJKSXYNMLD` with your Google Analytics ID in:
 Replace images in `public/img/` with your own:
 - `rockstar.jpg` - Main background
 - `rockstar-m.jpeg` - Mobile background
-- `RCKSTR.png` - Loading screen
+- `RCKSTR.jpg` - Loading screen
 - `grk.jpeg` - Mobile loading
 - `Imtiaz Ali.jpeg` - Imtiaz Ali page
 - `_.jpeg` - Favicon
